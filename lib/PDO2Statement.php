@@ -102,7 +102,7 @@ class SimplePDOStatement
      */
     final public function fetchQueryStrings()
     {
-        return json_encode(\array_merge_recursive_numeric($this->queries, $this->bindings));
+        return json_encode(\SimplePDO\array_merge_recursive_numeric($this->queries, $this->bindings));
     }
 
 }
