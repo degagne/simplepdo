@@ -1,0 +1,21 @@
+{
+	"name" : "degagne/simplepdo",
+	"type" : "library",
+	"description" : "Simple PHP PDO extension library",
+	"license" : "MIT",
+	"authors" : [
+		{
+			"name" : "Deric Degagne",
+			"email" : "deric.degagne@gmail.com"
+		}
+	],
+	"config" : { "optimize-autoloader" : true },
+	"require" : {
+		"php" : ">=5.4",
+		"ext-pdo" : "*"
+	},
+	"autoload" : {
+		"psr-4" : { "SimplePDO\\" : "lib/" },
+        "files": [ "lib/Functions.php"]
+	}
+}
