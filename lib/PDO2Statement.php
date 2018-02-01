@@ -27,7 +27,7 @@ class SimplePDOStatement
     /**
      * Returns an array containing all of the result set rows.
      *
-     * @return mixed
+     * @return array
      */
     final public function fetchAll()
 	{
@@ -49,7 +49,7 @@ class SimplePDOStatement
      * Returns a single column from the next row of a result set.
      *
      * @param  int    $column 0-indexed number of the column you wish to retrieve from the row
-     * @return string
+     * @return mixed
      */
     final public function fetchColumn($column = 0)
 	{
@@ -98,7 +98,7 @@ class SimplePDOStatement
     /**
      * Fetch query strings/params for session.
      *
-     * @return array
+     * @return string
      */
     final public function fetchQueryStrings()
     {
