@@ -157,12 +157,17 @@ class SimplePDO extends SimplePDOStatement
     /**
      * Set the default fetch mode for this statement.
      *
-     * @param  int    $fetchmode must be one of the PDO::FETCH_* constants.
      * @return object
      */
-    final public function setFetchMode($fetchmode)
+    final public function setFetchMode()
     {
-        $this->stmt->setFetchMode($fetchmode);
+        if (func_num_args()== 2)
+        {
+            $this->stmt->setFetchMode(func_get_arg(0), func_get_arg(1));
+            return $this;
+        }
+
+        $this->stmt->setFetchMode(func_get_arg(0));
         return $this;
     }
 
