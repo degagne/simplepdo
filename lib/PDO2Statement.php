@@ -74,7 +74,7 @@ class SimplePDOStatement
      */
     final public function queryStrings($statement)
     {
-        $this->queries[] = ['sql' => $statement];
+        $this->queries[] = ['sql' => preg_replace("/[\s+]+/", " ", $statement)];
         if (count($this->queries) == 1)
         {
             $this->index = 0;
