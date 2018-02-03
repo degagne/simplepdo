@@ -28,6 +28,8 @@ class SimplePDO extends SimplePDOStatement
      *
      * @param  object PDO2\Configuration object
      * @return void
+     *
+     * @throws RuntimeException if no supported PDO driver found used
      */
     public function __construct(Configuration $configuration)
     {
