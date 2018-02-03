@@ -15,6 +15,9 @@ class Configuration
      *
      * @param  string $inifile configuration file (ini)
      * @return void
+     *
+     * @throws RuntimeException if ini file not found or readable
+     * @throws RuntimeException if failed to parse ini file
      */
     public function __construct($inifile)
     {
@@ -35,6 +38,8 @@ class Configuration
      * @param  string $section  section header
      * @param  string $property property (key)
      * @return string
+     *
+     * @throws RuntimeException failed to retrieve configuration property from ini
      */
     final public function get($section, $property)
     {
